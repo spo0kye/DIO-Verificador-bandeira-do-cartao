@@ -1,0 +1,130 @@
+============================================================
+REGRAS DE DÍGITOS - BANDEIRAS DE CARTÃO (BRASIL)
+============================================================
+
+INFORMAÇÕES GERAIS
+------------------------------------------------------------
+• Os cartões seguem o padrão ISO/IEC 7812.
+• O primeiro dígito é o MII (Major Industry Identifier).
+• Os primeiros 6 a 8 dígitos formam o BIN/IIN (identificação do emissor).
+• O último dígito é o Dígito Verificador (Algoritmo de Luhn).
+• Comprimento varia entre 13 e 19 dígitos (padrão internacional).
+
+============================================================
+1) VISA
+============================================================
+Prefixos (IIN/BIN):
+• Começa com: 4
+
+Quantidade de dígitos:
+• 13, 16 ou 19 dígitos (16 é o mais comum)
+
+Exemplo estrutural:
+4XXXXXXXXXXXXXXX
+
+Validação:
+• Deve iniciar com 4
+• Deve ter comprimento válido
+• Deve passar no algoritmo de Luhn
+
+============================================================
+2) MASTERCARD
+============================================================
+Prefixos:
+• 51 a 55
+• 2221 a 2720
+
+Quantidade de dígitos:
+• 16 dígitos
+
+Exemplo estrutural:
+51XXXXXXXXXXXXXX
+ou
+2221XXXXXXXXXXXX
+
+Validação:
+• Prefixo dentro dos intervalos permitidos
+• 16 dígitos
+• Algoritmo de Luhn válido
+
+============================================================
+3) ELO
+============================================================
+Prefixos principais (podem variar):
+4011
+4312
+4389
+4514
+4576
+5041
+5066 a 5067
+5090
+6277
+6362
+6363
+
+Quantidade de dígitos:
+• 16 dígitos (principalmente)
+• Pode variar entre 16 e 19
+
+Validação:
+• Conferir prefixo na lista oficial
+• Conferir comprimento
+• Validar Luhn
+
+Observação:
+A Elo possui múltiplos intervalos BIN. Ideal validar contra lista atualizada.
+
+============================================================
+4) AMERICAN EXPRESS
+============================================================
+Prefixos:
+• 34
+• 37
+
+Quantidade de dígitos:
+• 15 dígitos
+
+Exemplo estrutural:
+34XXXXXXXXXXXXX
+
+Validação:
+• Deve iniciar com 34 ou 37
+• 15 dígitos
+• Luhn válido
+
+============================================================
+5) HIPERCARD
+============================================================
+Prefixos:
+• 6062
+• 3841 (antigos/em alguns casos específicos)
+
+Quantidade de dígitos:
+• 16 dígitos
+
+Validação:
+• Prefixo compatível
+• 16 dígitos
+• Luhn válido
+
+============================================================
+ALGORITMO DE LUHN (RESUMO)
+============================================================
+1. Percorrer os dígitos da direita para esquerda.
+2. Dobrar cada segundo dígito.
+3. Se o resultado for maior que 9, subtrair 9.
+4. Somar todos os dígitos.
+5. O total deve ser múltiplo de 10.
+
+============================================================
+OBSERVAÇÃO IMPORTANTE
+============================================================
+• A validação por dígitos NÃO garante que o cartão existe.
+• Apenas valida estrutura matemática.
+• Para validação real, é necessário autorização via adquirente.
+• Nunca armazenar CVV ou dados completos sem seguir PCI-DSS.
+
+============================================================
+FIM DO DOCUMENTO
+============================================================
